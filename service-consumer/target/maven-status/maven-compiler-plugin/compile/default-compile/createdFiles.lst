@@ -1,0 +1,4 @@
+com\archetype\springcloud\consumer\ServiceConsumerApp.class
+com\archetype\springcloud\consumer\controller\HelloController.class
+com\archetype\springcloud\consumer\service\MyFallback.class
+com\archetype\springcloud\consumer\service\HelloBackgroundService.class

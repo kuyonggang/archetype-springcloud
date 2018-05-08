@@ -1,0 +1,3 @@
+com\archetype\springcloud\api\impl\HelloServiceRemoteApiImpl.class
+com\archetype\springcloud\actuator\MyHealthIndicator.class
+com\archetype\springcloud\ServiceProviderApplication.class

@@ -1,0 +1,2 @@
+com\archetype\springcloud\gateway\filter\AccessFilter.class
+com\archetype\springcloud\gateway\ServiceGatewayApp.class
