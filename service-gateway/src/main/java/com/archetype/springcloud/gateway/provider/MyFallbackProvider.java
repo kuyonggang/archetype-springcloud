@@ -37,7 +37,7 @@ public class MyFallbackProvider implements ZuulFallbackProvider {
      */
     @Override
     public String getRoute() {
-        return "service-consumer";
+        return "service-consumer1";
     }
 
     @Override
@@ -55,7 +55,7 @@ public class MyFallbackProvider implements ZuulFallbackProvider {
             }
 
             /**
-             * 网关向api服务请求是失败了，但是消费者客户端向网关发起的请求是OK的，
+             * 网关向api服务请求时失败了，但是消费者客户端向网关发起的请求是OK的，
              * 不应该把api的404,500等问题抛给客户端
              * 网关和api服务集群对于客户端来说是黑盒子
              */

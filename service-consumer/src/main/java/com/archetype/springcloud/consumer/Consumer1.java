@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Bean;
 @EnableHystrix
 @SpringBootApplication
 @EnableHystrixDashboard
-public class ServiceConsumerApp
+public class Consumer1
 {
     @Bean
     Logger.Level feginLoggerLevel(){
@@ -29,6 +29,6 @@ public class ServiceConsumerApp
 
     public static void main( String[] args )
     {
-        SpringApplication.run(ServiceConsumerApp.class);
+        SpringApplication.run(Consumer1.class);
     }
 }

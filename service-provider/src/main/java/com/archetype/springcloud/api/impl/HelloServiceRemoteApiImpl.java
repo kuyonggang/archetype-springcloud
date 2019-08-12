@@ -31,7 +31,6 @@ public class HelloServiceRemoteApiImpl implements IHelloServiceRemoteApi {
         if (user == null) {
             return "unKnown";
         }
-
         return user.toString();
     }
 }
