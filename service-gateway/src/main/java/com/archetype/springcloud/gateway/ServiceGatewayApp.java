@@ -1,6 +1,6 @@
 package com.archetype.springcloud.gateway;
 
-import com.archetype.springcloud.gateway.filter.AccessFilter;
+import com.archetype.springcloud.gateway.filter.PostFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -23,8 +23,8 @@ import org.springframework.context.annotation.Bean;
 public class ServiceGatewayApp
 {
     @Bean
-    public AccessFilter accessFilter() {
-        return new AccessFilter();
+    public PostFilter accessFilter() {
+        return new PostFilter();
     }
 
     public static void main( String[] args )

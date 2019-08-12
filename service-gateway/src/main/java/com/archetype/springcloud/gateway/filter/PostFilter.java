@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
  *
  */
 @Slf4j
-public class AccessFilter extends ZuulFilter {
+public class PostFilter extends ZuulFilter {
 
     /**
      * 返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下：

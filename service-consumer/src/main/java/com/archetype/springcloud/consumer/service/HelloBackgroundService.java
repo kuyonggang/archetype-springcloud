@@ -1,10 +1,10 @@
 package com.archetype.springcloud.consumer.service;
 
-import com.archetype.common.api.IHelloServiceRemoteApi;
+import com.archetype.common.api.IHelloService;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
 @FeignClient(value = "service-provider",fallback = MyFallback.class)
-public interface HelloBackgroundService extends IHelloServiceRemoteApi {
+public interface HelloBackgroundService extends IHelloService {
 
     /*@Component
     @Slf4j

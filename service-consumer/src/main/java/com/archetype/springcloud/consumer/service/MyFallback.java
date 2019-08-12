@@ -16,17 +16,17 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MyFallback implements HelloBackgroundService{
     @Override
-    public String hello(String name) {
+    public String hello1(String name) {
         return "My fallback";
     }
 
     @Override
-    public User hello(String name, Integer age) {
+    public User hello2(String name, Integer age) {
         return new User("小王",199);
     }
 
     @Override
-    public String hello(User user) {
+    public String hello3(User user) {
         return null;
     }
 
