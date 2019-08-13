@@ -4,6 +4,9 @@ import com.archetype.common.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 类名称：MyFallback<br>
  * 类描述：<br>
@@ -30,11 +33,16 @@ public class MyFallback implements HelloBackgroundService{
         return null;
     }
 
-    /*public Object fallback() {
+    @Override
+    public String saveUser(User user) {
+        return null;
+    }
+
+    public Object fallback() {
         LOGGER.error("请求异常进入断路器！");
         Map<String, Object> params = new HashMap<>();
         params.put("version", "1.0.0");
         params.put("msg", "请求异常进入断路器");
         return params;
-    }*/
+    }
 }

@@ -2,8 +2,6 @@ package com.archetype.springcloud.consumer.controller;
 
 import com.archetype.common.model.User;
 import com.archetype.springcloud.consumer.service.HelloBackgroundService;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +20,7 @@ public class HelloController {
     private HelloBackgroundService helloBackgroundService;
 
     public String fallbackTest(){
+
         return "====fallbackTest()====";
     }
 
@@ -41,15 +40,15 @@ public class HelloController {
     /**
      * 传播安全上下文或者使用spring范围
      * 详细内容请参考https://github.com/Netflix/Hystrix/wiki/Configuration
-     *
+     *@HystrixCommand:代表调用下面的方法发送请求 fallbackMethod:请求降级:由我们控制，降级之后进行什么逻辑，内部参数相当于方法名
      * @author YoungerKu  2018/5/7
      * @param
      * @return java.lang.String
      */
-    @HystrixCommand(fallbackMethod = "fallbackTest",
-            commandProperties = {
-                    @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
-            })
+//    @HystrixCommand(fallbackMethod = "fallbackTest",
+//            commandProperties = {
+//                    @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
+//            })
     @GetMapping("/getRespByName")
     public String getRespByName(){
         String s = helloBackgroundService.hello1("张三");

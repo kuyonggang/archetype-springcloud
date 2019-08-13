@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 
 /**
- * Hello world!
+ * @EnableCircuitBreaker：代表允许断路器
  *
  */
 @EnableDiscoveryClient

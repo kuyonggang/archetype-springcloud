@@ -42,4 +42,10 @@ public class HelloServiceImpl implements IHelloService {
         }
         return user.toString();
     }
+
+    @Override
+    public String saveUser(User user) {
+        System.out.println("Save user ...");
+        return user.toString();
+    }
 }
