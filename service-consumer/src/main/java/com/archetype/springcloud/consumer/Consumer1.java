@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * @EnableCircuitBreaker：代表允许断路器
- *
+ * @EnableFeignClients：该注解能激活Eureka中的对注册中心注册服务实现
  */
 @EnableDiscoveryClient
 @EnableFeignClients

@@ -26,7 +26,7 @@ public class PostFilter extends ZuulFilter {
     }
 
     /**
-     * 通过int值来定义过滤器的执行顺序
+     * 通过int值来定义过滤器的执行顺序，数字越大，优先级越低
      * @return
      */
     @Override
@@ -60,8 +60,14 @@ public class PostFilter extends ZuulFilter {
         Object accessToken = request.getParameter("accessToken");
         if (accessToken == null) {
             LOGGER.warn("access token is empty");
+            // 不对该请求进行路由
             ctx.setSendZuulResponse(false);
+            // 返回错误码
             ctx.setResponseStatusCode(401);
+            // 返回错误内容
+            ctx.setResponseBody("{\"result\":\"access token is empty!\"}");
+            // 让下一个filter看到上一个filter的状态
+            ctx.set("isSuccess",false);
             return null;
         }
         LOGGER.info("access token ok,token:{}",accessToken);

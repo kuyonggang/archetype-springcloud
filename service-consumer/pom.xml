@@ -26,15 +26,15 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <!-- 实现服务接口熔断 -->
         <dependency>
@@ -42,7 +42,8 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
         <!-- 运行Hystrix仪表板需要在spring boot主类上标注@EnableHystrixDashboard
-        然后访问/hystrix查看仪表盘，在hystrix客户端应用使用/hystrix.stream监控 -->
+        然后访问/hystrix查看仪表盘，在hystrix客户端应用使用/hystrix.stream监控
+        访问地址：http://localhost:port/hystrix -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
@@ -55,6 +56,12 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
