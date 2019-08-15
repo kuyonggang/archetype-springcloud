@@ -15,6 +15,8 @@ Aim to create a springcloud archetype project we can use is to quick start our p
 
 7、zuul网关server-gateway
 
+8、断路器聚合监控(Hystrix Turbine)
+
 ================================================================================
 项目持续更新中... 请多多关注！
 
