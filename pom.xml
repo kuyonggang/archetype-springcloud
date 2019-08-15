@@ -25,6 +25,7 @@
         <module>service-eureka</module>
         <module>service-gateway</module>
         <module>service-consumer2</module>
+        <module>service-turbine</module>
     </modules>
 
     <properties>

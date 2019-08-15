@@ -25,17 +25,22 @@ public class HelloServiceImpl implements IHelloService {
 
     @Override
     public User hello2(String name, Integer age) {
-        System.out.println("hello2...");
         try {
             name= URLDecoder.decode(name,"UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        System.out.println("hello2...");
         return new User(name, age);
     }
 
     @Override
     public String hello3(@RequestBody User user) {
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("hello3...");
         if (user == null) {
             return "unKnown";
