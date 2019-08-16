@@ -9,9 +9,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.archetype.springcloud.consumer</groupId>
-    <artifactId>service-consumer</artifactId>
+    <artifactId>service-consumer1</artifactId>
 
-    <name>service-consumer</name>
+    <name>service-consumer1</name>
     <url>http://www.example.com</url>
 
     <dependencies>

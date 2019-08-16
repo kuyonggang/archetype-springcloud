@@ -35,7 +35,7 @@ public class Consumer2Controller {
             Map params = new HashMap();
             params.put("name","kuyonggang");
             params.put("age",23);
-            result = restTemplate.getForObject("http://service-provider/hello1?name=kuyonggang",String.class);
+            result = restTemplate.getForObject("http://service-provider/hello3",String.class,params);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());

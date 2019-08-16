@@ -21,10 +21,10 @@
         <module>service-api</module>
         <module>service-config</module>
         <module>service-provider</module>
-        <module>service-consumer</module>
+        <module>service-consumer1</module>
+		<module>service-consumer2</module>
         <module>service-eureka</module>
         <module>service-gateway</module>
-        <module>service-consumer2</module>
         <module>service-turbine</module>
     </modules>
 
