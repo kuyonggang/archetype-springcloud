@@ -26,6 +26,7 @@
         <module>service-eureka</module>
         <module>service-gateway</module>
         <module>service-turbine</module>
+        <module>service-sidecar</module>
     </modules>
 
     <properties>

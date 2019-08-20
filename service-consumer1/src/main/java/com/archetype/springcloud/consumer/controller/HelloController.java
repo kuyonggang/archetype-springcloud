@@ -20,7 +20,6 @@ public class HelloController {
     private HelloBackgroundService helloBackgroundService;
 
     public String fallbackTest(){
-
         return "====fallbackTest()====";
     }
 

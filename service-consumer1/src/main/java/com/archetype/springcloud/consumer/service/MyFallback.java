@@ -39,7 +39,6 @@ public class MyFallback implements HelloBackgroundService{
     }
 
     public Object fallback() {
-        LOGGER.error("请求异常进入断路器！");
         Map<String, Object> params = new HashMap<>();
         params.put("version", "1.0.0");
         params.put("msg", "请求异常进入断路器");

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 @RequestMapping("/config")
-public class ConsumerConfigController
+public class ConfigController
 {
     @Value("${hello}")
     private String hello;
