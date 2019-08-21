@@ -17,6 +17,8 @@ Aim to create a springcloud archetype project we can use is to quick start our p
 
 8、断路器聚合监控(Hystrix Turbine)
 
+9、使用Sidecar支持异构平台的微服务
+
 ================================================================================
 项目持续更新中... 请多多关注！
 
